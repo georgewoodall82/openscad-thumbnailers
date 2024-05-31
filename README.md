@@ -1,10 +1,10 @@
 # Openscad thumbnailers
 
-GTK thumbnailers for .scad and .stl files.
+GTK thumbnailers for .scad, .stl and .3mf files.
 
 ![screenshot](screenshot.png)
 
-This project allows most GTK file managers (Nautilus, Nemo, Caja and PCManFM-gtk) to show thumbnails for `.stl` and `.scad` files.
+This project allows most GTK file managers (Nautilus, Nemo, Caja and PCManFM-gtk) to show thumbnails for `.stl`, `.scad` and `.3mf` files.
 
 It also **works with Nautilus>=3.28**, which introduced thumbnailers sandboxing with bubblewrap.
 
