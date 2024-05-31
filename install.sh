@@ -1,7 +1,17 @@
-cp *.thumbnailer /usr/share/thumbnailers/
-cp *-thumbnailer-script /usr/local/bin/
-chmod +x /usr/local/bin/*-thumbnailer-script
+#!/bin/bash
 
-xdg-mime install --novendor stl-mime.xml
-xdg-mime install --novendor scad-mime.xml
-update-mime-database /usr/share/mime
+# Check if a custom root is provided, otherwise use '/'
+ROOT=${1:-/}
+
+# Copy thumbnailer files to the specified root directory
+mkdir -p "$ROOT/usr/share/thumbnailers"
+mkdir -p "$ROOT/usr/local/bin"
+
+cp stl.thumbnailer "$ROOT/usr/share/thumbnailers/"
+cp scad.thumbnailer "$ROOT/usr/share/thumbnailers/"
+
+cp stl-thumbnailer-script "$ROOT/usr/local/bin/"
+cp scad-thumbnailer-script "$ROOT/usr/local/bin/"
+
+chmod +x "$ROOT/usr/local/bin/stl-thumbnailer-script"
+chmod +x "$ROOT/usr/local/bin/scad-thumbnailer-script"
