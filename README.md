@@ -22,15 +22,19 @@ sudo dnf install openscad ImageMagick xorg-x11-server-Xvfb
 
 ## Installation
 
-To install the thumbnailern a terminal into this directory and execute:
+### Arch Linux
+There is an AUR package https://aur.archlinux.org/packages/openscad-thumbnailers
 
+You can install it using your favourite aur helper:
 ```bash
-sudo bash install.sh
+yay -S openscad-thumbnailers
 ```
 
-After that clean the old thumbnails and restart nautilus
+### Other
+Clone the repo and run the install.sh file
 
 ```bash
-rm -r ~/.cache/thumbnails
-nautilus -q
+git clone https://github.com/georgewoodall82/openscad-thumbnailers
+cd openscad-thumbnailers
+sudo bash install.sh
 ```
